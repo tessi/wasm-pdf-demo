@@ -1,0 +1,32 @@
+{
+  "name": "wasm-invoice-pdf",
+  "version": "0.1.0",
+  "description": "An example browser demo to offer a PDF file as a download that was generated with WASM code",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tessi/wasm-invoice-pdf.git"
+  },
+  "keywords": [
+    "webassembly",
+    "wasm",
+    "rust",
+    "webpack"
+  ],
+  "author": "Philipp Tessenow <philipp@tessenow.org>",
+  "license": "(MIT)",
+  "bugs": {
+    "url": "https://github.com/tessi/wasm-invoice-pdf/issues"
+  },
+  "homepage": "https://github.com/tessi/wasm-invoice-pdf#readme",
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "copy-webpack-plugin": "^5.0.0"
+  }
+}

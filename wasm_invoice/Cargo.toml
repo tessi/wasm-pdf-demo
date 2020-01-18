@@ -1,0 +1,33 @@
+[package]
+name = "wasm-invoice-pdf"
+version = "0.1.0"
+authors = ["Philipp Tessenow <philipp@tessenow.org>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# printpdf = { git = "https://github.com/messense/printpdf.git", branch = "patch-1" }
+printpdf = "0.2.12"
+base64 = "0.11.0"
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+#
+# Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
+wee_alloc = { version = "0.4.2", optional = true }
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  "console",
+]
+
+[patch.crates-io]
+printpdf = { path = "../../printpdf" }
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
