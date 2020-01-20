@@ -10,7 +10,7 @@ The idea is to have a WASM program which can generate (fake) invoice PDF files w
 This repository contains of multiple parts, each in its own directory:
 
 * [`wasm_invoice`](./wasm_invoice/README.md) - The invoice generation code implemented in Rust
-* [`browser_example](./browser_example/README.md)` - An HTML page which generates the invoice and offers it as a download
+* [`browser_example`](./browser_example/README.md) - An HTML page which generates the invoice and offers it as a download
 * [`elixir_example`](./elixir_example/README.md) -  A fake Elixir backend which generates an invoice and saves it to disk
 
 Each directory has it's own `README`. Please refer to those for details on the subprojects.
